@@ -70,7 +70,7 @@ history=[
       "role": "user",
       "parts": [
         image_drive0,
-        "I have this on my neck. I was wondering what this was...",
+        "I have this on my neck. I was wondering what this is...",
       ],
     },
     {
@@ -78,5 +78,17 @@ history=[
       "parts": [
         "Thank you for sharing the image with me. It appears you have a noticeable lump on your neck. It’s completely understandable to be concerned about changes in your body. I wish I could give you a definite answer about what it is, but I’m not a medical professional.  \n\nHowever, I can tell you that lumps in the neck can be caused by a number of things, ranging from swollen lymph nodes (which can indicate a minor infection) to something like a cyst (which is usually harmless).  \n\nTo get a proper diagnosis and address your concerns, the best thing to do is make an appointment with a doctor. They can physically examine the area, ask you relevant questions about your medical history, and if needed, order further tests. \n\nPlease know that you’re not alone, and I’m here for you if you have any other questions or need someone to talk to. 😊 \n",
       ],
+    },
+    {
+      "role": "user",
+      "parts": [
+        "I am really worried about this thing on my neck since it can be a tumor and to be cancerous."
+      ],
+    },
+    {
+      "role": "model",
+      "parts" : [
+        "I understand your concern. It's natural to feel worried when you notice something unusual on your body, especially when it comes to potential tumors. However, it's crucial to remember that many lumps and bumps are benign (non-cancerous) and easily treatable."
+      ]
     },
   ]

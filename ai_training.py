@@ -91,4 +91,16 @@ history=[
         "I understand your concern. It's natural to feel worried when you notice something unusual on your body, especially when it comes to potential tumors. However, it's crucial to remember that many lumps and bumps are benign (non-cancerous) and easily treatable."
       ]
     },
+    {
+      "role": "user",
+      "parts" : [
+        "I am still kind of worried, can you give me more confidence that I am going to be okay."
+      ]
+    },
+    {
+      "role": "model",
+      "parts" : [
+        "I understand your worry. It's natural to be concerned when you find something unusual on your body. It's brave of you to be open about your feelings and seek reassurance. You're taking proactive steps, and focus on what you can control. I'm here for you. If you need to talk or want to explore other ways to boost your confidence, please don't hesitate to reach out."
+      ]
+    },
   ]

@@ -1,43 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/static/chatbot.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuraAI</title>
 </head>
 
 <body>
-
-    <div class="navbar" onclick="toggleMenu()">
-        <div class="menu-icon">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <div class="menu-items">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-
-
-    <h1 class = "title">
-        <div class="logo">
-            <span class="letter">C</span>
-            <span class="letter">u</span>
-            <span class="letter">r</span>
-            <span class="letter">a</span>
-            <span class="letter">A</span>
-            <span class="letter">I</span>
-        </div>
-    </h1>
-
     <form method="POST" action="/" enctype="multipart/form-data">
         
         <div class="user_input_div">
@@ -51,26 +20,17 @@
     </form>
 
     <div class="chat_container">
-        <div class="user_message">
-            {% if user_input %}
-                <p><strong>You:</strong> {{ user_input }}</p>
-            {% endif %}
-        </div>
-
-        <div class="bot_message">
-            {% if bot_response %}
-                <p><strong>CuraAI:</strong> {{ bot_response }}</p>
-            {% endif %}
-        </div>
+    
+        {% if user_input %}
+            <p><strong>You:</strong> {{ user_input }}</p>
+        {% endif %}
+    
+        {% if bot_response %}
+            <p><strong>CuraAI:</strong> {{ bot_response }}</p>
+        {% endif %}
 
     </div>
 
-    <script>
-        function toggleMenu() {
-            var menuItems = document.querySelector('.menu-items');
-            menuItems.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
 

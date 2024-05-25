@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- import other styles here-->
+    <link rel="stylesheet" type="text/css" href="/static/navigation.css">
+    <link rel="stylesheet" type="text/css" href="/static/logo.css">
+    <link rel="stylesheet" type="text/css" href="/static/chatbot.css">
+    <link rel="stylesheet" type="text/css" href="/static/find.css">
 </head>
 <body>
+    {% include 'navigation.html' %}
+    {% include 'logo.html' %}
     {% include 'chatbot.html' %}
+
+    <div class="find-location-button">
+        <button onclick="findTreatmentLocations()">Find Treatment Locations</button>
+    </div>
+
 </body>
 </html>

@@ -19,7 +19,6 @@ def index():
             prompt = "Uploaded image: " + file.filename
             bot_response = generate_text(prompt)  # Generate bot response based on the prompt
         elif user_input.strip():  # Check if user_input is not empty or whitespace
-            # Define prompt using the text input
             prompt = user_input
             bot_response = generate_text(user_input)  # Use text input as the prompt
         else:

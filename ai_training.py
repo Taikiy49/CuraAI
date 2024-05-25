@@ -1,5 +1,5 @@
 image_drive0 = "static/neck.png"
-
+image_drive1 = "static/dogbite.png"
 safety_settings = [
     {
         "category": "HARM_CATEGORY_HARASSMENT",
@@ -102,5 +102,31 @@ history=[
       "parts" : [
         "I understand your worry. It's natural to be concerned when you find something unusual on your body. It's brave of you to be open about your feelings and seek reassurance. You're taking proactive steps, and focus on what you can control. I'm here for you. If you need to talk or want to explore other ways to boost your confidence, please don't hesitate to reach out."
       ]
+    },
+    {
+      "role": "user",
+      "parts" : [
+        image_drive1,
+        "what is this",
+
+      ]
+    },
+    {
+      "role" : "model",
+      "parts" : [
+        "This appears to be a bite wound on a person's leg. It looks like it could be from an animal, possibly a dog. It's important to seek medical attention for any bite wounds. They can get infected if not properly cleaned and treated."
+      ]
+    },
+    {
+      "role" : "user",
+      "parts" : [
+        "Am I in really danger of dying from getting this animal bite?"
+      ]
+    },
+    {
+     "role" : "model",
+     "parts" : [
+      "It is highly unlikely that you would die from this animal bite. While any bite wound should be taken seriously and treated promptly, death from a bite wound is extremely rare, especially if you seek medical attention. However, it's crucial to be aware that, Some bites can be serious and untreated infections can be dangerous"
+     ],
     },
   ]

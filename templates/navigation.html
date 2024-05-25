@@ -1,0 +1,27 @@
+<div class="navbar" onclick="toggleMenu()">
+    <div class="menu-icon">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="menu-items">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        var menuItems = document.querySelector('.menu-items');
+        menuItems.classList.toggle('active');
+    }
+
+
+
+    
+</script>

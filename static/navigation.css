@@ -1,0 +1,51 @@
+.navbar {
+    padding: 30px 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    position: relative; 
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 5px;
+    border-radius: 20%; /* or border-radius: 1.5px; */
+}
+
+.menu-items {
+    margin-right: 50px;
+    display: none;
+}
+
+.menu-items.active {
+    display: block;
+}
+
+.menu-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu-items ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+

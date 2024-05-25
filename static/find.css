@@ -1,0 +1,20 @@
+.find-location-button {
+    text-align: center;
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.find-location-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.find-location-button button:hover {
+    background-color: #0056b3;
+}

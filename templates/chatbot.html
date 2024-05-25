@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/chatbot.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuraAI</title>
+</head>
+
+<body>
+    <h1 class="title">CuraAI</h1>
+    <form method="POST" action="/submit" enctype="multipart/form-data">
+        
+        <div id="user_input_div">
+            <label for="user_input">Enter your prompt:</label><br>
+            <input type="text" id="user_input" name="user_input"><br>
+        </div>
+        
+        <label for="file_input">Upload an image:</label><br>
+        <input type="file" id="file_input" name="file_input"><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% if user_input %}
+        <p><strong>You:</strong> {{ user_input }}</p>
+    {% endif %}
+    {% if bot_response %}
+        <p><strong>CuraAI:</strong> {{ bot_response }}</p>
+    {% endif %}
+</body>
+</html>

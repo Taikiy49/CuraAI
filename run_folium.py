@@ -1,0 +1,24 @@
+import folium
+
+def plot_locations(locations):
+    # Create a map
+    my_map = folium.Map(location=[0, 0], zoom_start=2)
+
+    # Add markers for each location
+    for location in locations:
+        latitude, longitude = location
+        folium.Marker(location=[latitude, longitude], popup="Location").add_to(my_map)
+
+    # Display the map
+    return my_map
+
+
+def create_map(locations):
+    # Create the map
+    my_map = plot_locations(locations)
+
+    # Save the map as an HTML file
+    my_map.save("templates/multiple_locations_map.html")
+
+    # Display the map
+    my_map

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from chatbot_settings import ChatbotSettings
 from extract_data import run_data_extraction
+from run_folium import create_map
 
 app = Flask(__name__)
 chatbot = ChatbotSettings()
@@ -38,7 +39,8 @@ class FlaskApp:
             state = request.form['state']
             city = request.form['city']
             locations = run_data_extraction(FlaskApp._bot_response, chatbot, state, city)
-            print(locations)
+            create_map(locations)
+            return render_template('multiple_locations_map.html')
         return render_template('locations.html')
 
     @staticmethod

@@ -30,6 +30,8 @@ class ExtractData:
         return self._manipulated_data
     
 def run_data_extraction(response, chatbot, state, city):
+    coordinates_list = []
     locations = list(ExtractData(response, chatbot, state, city).get_locations().strip().split(','))
     for location in locations:
-        print(location_summary(location, state, city))
+        coordinates_list.append(location_summary(location, state, city))
+    return coordinates_list

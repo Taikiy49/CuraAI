@@ -12,4 +12,4 @@ def location_summary(place_name, state, city):
     address = place['formatted_address']
     location = place['geometry']['location']
 
-    return [name, address, location['lat'], location['lng']]
+    return location['lat'], location['lng']

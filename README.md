@@ -60,7 +60,7 @@ Employing Google Gemini API's machine learning algorithms for text classificatio
 ### Geolocation and Mapping:
 
 - Utilizing Melisa API data for geospatial analysis to determine the proximity of medical facilities.
-- Integrating with Google Maps API to visualize the locations of nearby medical facilities.
+- Integrating with Google Maps API and Folium to visualize the locations of nearby medical facilities.
 
 ## Output
 

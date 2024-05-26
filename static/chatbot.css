@@ -30,7 +30,7 @@ form {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align form elements to the left within the centered container */
+    text-align: left; 
 }
 
 label {
@@ -40,7 +40,7 @@ label {
 
 .user_input{
     color: white;
-    background-color: rgba(173, 216, 230, 0.205); /* Light blue with 50% opacity */
+    background-color: rgba(173, 216, 230, 0.205); 
 }
 
 .user_input::placeholder {

@@ -2,6 +2,7 @@
 <html>
 <head>
     {% include 'all_styles.html' %}
+    <link rel="stylesheet" type="text/css" href="/static/locations.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -19,8 +20,14 @@
     </div>
 
     <div class="find-location-button">
-        <button onclick="findTreatmentLocations()">Find Treatment Locations</button>
+        <button onclick="openNewScreen()">Find Treatment Locations</button>
     </div>
+
+    <script>
+        function openNewScreen() {
+            window.location.href = "/locations"; 
+        }
+    </script>
     
 </body>
 </html>

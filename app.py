@@ -14,15 +14,15 @@ def generate_text(prompt):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        user_input = request.form['user_input']  # Get text input from the form
-        file = request.files['file_input']  # Get uploaded file from the form
+        user_input = request.form['user_input']
+        file = request.files['file_input'] 
         
         if file:
             prompt = "Uploaded image: " + file.filename
             bot_response = generate_text(prompt)
             return render_template('chat_output.html', user_input=user_input, bot_response=bot_response)
             
-        elif user_input.strip():  # Check if user_input is not empty or whitespace
+        elif user_input.strip():  
             prompt = user_input
             bot_response = generate_text(prompt)
             return render_template('chat_output.html', user_input=user_input, bot_response=bot_response)
@@ -31,6 +31,10 @@ def index():
             bot_response = "Please provide a prompt."
             return render_template('index.html', user_input=user_input, bot_response=bot_response)
     return render_template('index.html')
+
+@app.route('/locations', methods=['GET', 'POST'])
+def locate():
+    return render_template('locations.html')
 
 class ExtractData:
     def __init__(self, response):
@@ -53,9 +57,6 @@ class ExtractData:
     
 def run_data_extraction(response):
     bot_response = ExtractData(response).run_class()
-
-
-
 
 if __name__ == '__main__':
     chatbot.run_program()

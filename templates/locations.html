@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'all_styles.html' %}
+</head>
+<body>
+    {% include 'logo.html' %}
+    <div class="input-container">
+        <form id="user-input-form" method="POST" action="/">
+            <input type="text" class="state" placeholder="Enter your state here..." required>
+            <input type="text" class="city" placeholder="Enter your city here..." required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -10,6 +10,7 @@ def generate_text(prompt):
     convo.send_message(prompt)
     return convo.last.text
 
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
@@ -19,18 +20,17 @@ def index():
         if file:
             prompt = "Uploaded image: " + file.filename
             bot_response = generate_text(prompt)
-            run_data_extraction(bot_response)
+            return render_template('chat_output.html', user_input=user_input, bot_response=bot_response)
             
         elif user_input.strip():  # Check if user_input is not empty or whitespace
             prompt = user_input
             bot_response = generate_text(prompt)
-            run_data_extraction(bot_response)
+            return render_template('chat_output.html', user_input=user_input, bot_response=bot_response)
+            
         else:
             bot_response = "Please provide a prompt."
-        
-        return render_template('index.html', user_input=user_input, bot_response=bot_response)
+            return render_template('index.html', user_input=user_input, bot_response=bot_response)
     return render_template('index.html')
-
 
 class ExtractData:
     def __init__(self, response):

@@ -1,9 +1,9 @@
 .logo {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .letter {
-    color: black;
+    color: white;
     display: inline-block;
     padding-right: -100px;
     animation: spin 2s linear infinite;
@@ -17,7 +17,8 @@
 }
 
 h1{
+    color: white;
     margin-top: -30px;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
 }

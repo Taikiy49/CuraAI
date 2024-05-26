@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from chatbot_settings import ChatbotSettings
+from chatbot_settings import prompt_string
 
 app = Flask(__name__)
 chatbot = ChatbotSettings()
@@ -22,7 +23,7 @@ def index():
             
         elif user_input.strip():  # Check if user_input is not empty or whitespace
             prompt = user_input
-            bot_response = generate_text(user_input)
+            bot_response = generate_text(prompt)
             run_data_extraction(bot_response)
         else:
             bot_response = "Please provide a prompt."
@@ -33,15 +34,25 @@ def index():
 
 class ExtractData:
     def __init__(self, response):
-        self.response = response
-    def take_bot_response(self):
-        return self.response
+        self._response = response
+        self._manipulated_data = None
+
+    def take_bot_response(self):    
+        return self._response
     
+    def manipulate_bot_response(self):
+        bot_response = self._response
+        manipulate_data = generate_text(prompt_string + bot_response)
+        self._manipulated_data = manipulate_data
 
+    def run_class(self):
+        self.take_bot_response()
+        self.manipulate_bot_response()
+        return self._manipulated_data
+    
 def run_data_extraction(response):
-    bot_response = ExtractData(response).take_bot_response()
+    bot_response = ExtractData(response).run_class()
     print(bot_response)
-
 
 
 if __name__ == '__main__':

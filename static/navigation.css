@@ -1,8 +1,8 @@
 .navbar {
-    padding: 30px 25px;
+    padding: 40px 30px;
     font-weight: bold;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-start; 
     align-items: center;
     position: relative; 
 }
@@ -23,7 +23,7 @@
 }
 
 .menu-items {
-    margin-right: 50px;
+    margin-left: 50px;
     display: none;
 }
 
@@ -39,7 +39,7 @@
 
 .menu-items ul li {
     display: inline;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .menu-items ul li a {

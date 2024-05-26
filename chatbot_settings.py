@@ -1,7 +1,7 @@
 import google.generativeai as genai
 from ai_training import safety_settings, generation_config, system_instruction, history
 
-prompt_string = "With this response just name me 3 possible medical diagnoses. List the 3 diagnoses and just the 3 diagnoses and nothing else in the response!: "
+prompt_string = "With this response just name me 3 possible medical places I can go nearby to get this condition treated. List the 3 locations and just the 3 locations and nothing else in the response...: "
 class ChatbotSettings:
     def __init__(self):
         self._api_key = "AIzaSyB4OUHNrACY9K5LkPyAtQ416tlOX1jTjSk"

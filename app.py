@@ -48,11 +48,13 @@ class ExtractData:
     def run_class(self):
         self.take_bot_response()
         self.manipulate_bot_response()
+        print(self._manipulated_data)
         return self._manipulated_data
     
 def run_data_extraction(response):
     bot_response = ExtractData(response).run_class()
-    print(bot_response)
+
+
 
 
 if __name__ == '__main__':

@@ -7,7 +7,7 @@ body {
     font-family: 'Chalkboard', cursive;
     margin: 0;
     padding: 0;
-    background-image: url("medical.png");
+    background-image: url("photo/medical.png");
     background-size: cover; 
     background-repeat: no-repeat;
     overflow: auto;

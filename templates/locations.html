@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include 'all_styles.html' %}
+    <link rel="stylesheet" type="text/css" href="/static/locations.css">
+    
 </head>
 <body>
     {% include 'logo.html' %}
     <div class="input-container">
-        <form id="user-input-form" method="POST" action="/">
-            <input type="text" class="state" placeholder="Enter your state here..." required>
-            <input type="text" class="city" placeholder="Enter your city here..." required>
-            <button type="submit">Submit</button>
+        <form id="user-input-form" method="POST" action="/locations">
+
+            <input type="text" name="state" class="state" placeholder="Enter your state here..." required>
+            <input type="text" name="city" class="city" placeholder="Enter your city here..." required>
+            <div class="center_button"><button type="submit">Submit</button></div>
         </form>
     </div>
 </body>

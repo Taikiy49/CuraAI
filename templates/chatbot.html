@@ -10,13 +10,16 @@
     <form method="POST" action="/" enctype="multipart/form-data">
         
         <div class="user_input_div">
-            <label for="user_input">Enter your prompt:</label><br>
-            <input type="text" id="user_input" name="user_input"><br>
+            <!-- Use placeholder attribute to show the text inside the input field -->
+            <input type="text" class="user_input" name="user_input" placeholder="Enter a prompt"><br>
         </div>
         
-        <label for="file_input">Upload an image:</label><br>
-        <input type="file" id="file_input" name="file_input"><br>
-        <button type="submit">Submit</button>
+        <div class="user_file_upload_div">
+            <label for="file_input"></label><br>
+            <div class="box"><input type="file" id="file_input" name="file_input"><br></div>
+        </div>
+
+        <div class="button_container"><button type="submit">Submit</button></div>
     </form>
 
     <div class="chat_container">
@@ -33,5 +36,3 @@
 
 </body>
 </html>
-
-

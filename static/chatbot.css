@@ -1,52 +1,87 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
 body {
     font-family: 'Chalkboard', cursive;
     margin: 0;
     padding: 0;
-    background-color: rgb(230, 230, 230);
+    background-image: url("medical.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
     overflow: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Align everything to the center horizontally */
 }
 
 .title {
-    text-align: center;
-    margin-top: 50px;
     font-size: 36px;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
+    color: white;
+    width: 80%;
+    margin: 50px auto 0;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align form elements to the left within the centered container */
 }
 
 label {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
+}
+
+.user_input{
+    background-color: lightblue;
+}
+
+.box{
+    margin-top: -30px;
+    text-align: center;
+    margin-left: 100px;
 }
 
 .user_input_div {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
+
+.user_file_upload_div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+}
+
+
+
+
+
 
 input[type="text"],
 input[type="file"],
 button {
     font-family: 'Chalkboard', cursive;
-    width: 100%;
+    width: calc(100% - 20px); /* Adjust the width as needed */
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px lightblue;
     border-radius: 5px;
     font-size: 16px;
 }
 
 button {
+    width: 200px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -57,14 +92,19 @@ button:hover {
     background-color: #0056b3;
 }
 
+.button_container{
+    text-align: center;
+}
+
 p {
     margin: 10px 0;
 }
+
 .chat_container {
     margin-top: 50px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: #f9f9f9;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: lightblue;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

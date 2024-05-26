@@ -17,7 +17,7 @@
 .line {
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: white;
     margin-bottom: 5px;
     border-radius: 20%; /* or border-radius: 1.5px; */
 }
@@ -44,7 +44,7 @@
 
 .menu-items ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 

@@ -30,7 +30,7 @@ Upon accessing the platform, users are prompted to input textual descriptions of
 - Gen AI
 - Google Gemini API
 - Google Maps API
-- Melisa API
+- Folium
 
 ## Display
 

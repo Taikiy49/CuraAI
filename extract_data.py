@@ -1,3 +1,5 @@
+from geolocation import location_summary
+
 prompt_string = "With this response just name me 3 possible medical places I can go nearby to get this condition treated. List the 3 locations and just the 3 locations and nothing else in the response...: "
 
 def generate_text(prompt, chatbot):
@@ -19,7 +21,7 @@ class ExtractData:
     
     def manipulate_bot_response(self):
         bot_response = self._response
-        manipulate_data = generate_text(f"{prompt_string}{bot_response} Give me locations in {self._state}: {self._city}", self._chatbot)
+        manipulate_data = generate_text(f"{prompt_string}{bot_response} Give me locations in {self._state}: {self._city}. Give it to me in comma-separated values", self._chatbot)
         self._manipulated_data = manipulate_data
 
     def get_locations(self):
@@ -28,4 +30,6 @@ class ExtractData:
         return self._manipulated_data
     
 def run_data_extraction(response, chatbot, state, city):
-    return ExtractData(response, chatbot, state, city).get_locations()
+    locations = list(ExtractData(response, chatbot, state, city).get_locations().strip().split(','))
+    for location in locations:
+        print(location_summary(location, state, city))

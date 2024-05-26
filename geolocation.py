@@ -1,28 +1,15 @@
 import requests
 
-API_KEY = 'AIzaSyCpspy8Iw3hPb7TVteMrLAs0X8y7OA5Ca0'
-location_name = 'New York City'  
+def location_summary(place_name, state, city):
+    API_KEY = 'AIzaSyCpspy8Iw3hPb7TVteMrLAs0X8y7OA5Ca0'
+    query = f"{place_name} in {city}, {state}"
+    api_url = f'https://maps.googleapis.com/maps/api/place/textsearch/json?query={query}&key={API_KEY}'
 
-# Construct the API request URL
-api_url = f'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input={location_name}&inputtype=textquery&fields=geometry,formatted_address,name&key={API_KEY}'
-
-# Make the API request
-response = requests.get(api_url)
-data = response.json()
-
-print(data)
-# Process the response
-if data['status'] == 'OK' and 'candidates' in data and len(data['candidates']) > 0:
-    # Extract relevant information
-    place = data['candidates'][0]
+    response = requests.get(api_url)
+    data = response.json()
+    place = data['results'][0]
     name = place['name']
     address = place['formatted_address']
     location = place['geometry']['location']
 
-    # Do something with the retrieved information
-    print(f"Name: {name}")
-    print(f"Address: {address}")
-    print(f"Latitude: {location['lat']}")
-    print(f"Longitude: {location['lng']}")
-else:
-    print("No results found")
+    return [name, address, location['lat'], location['lng']]
